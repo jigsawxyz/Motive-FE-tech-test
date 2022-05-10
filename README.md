@@ -41,4 +41,4 @@ Using the given data write a function that returns an _array_ of objects that re
 
 ```
 
-** if using typescript the expectation is that you create types for the raw data and the interface / return types of your function **
+**if using typescript the expectation is that you create types for the raw data and the interface / return types of your function**
