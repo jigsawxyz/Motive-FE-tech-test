@@ -7,6 +7,7 @@ The aim of this test is to assess your ability to fetch data from an api and tra
 ## Getting started
 
 run `npm i`
+run `npm test`
 
 ## Data
 
