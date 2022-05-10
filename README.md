@@ -1,5 +1,7 @@
 ## Motive create tech test
 
+To start; create a fork of this readme.
+
 The aim of this test is to assess your ability to fetch data from an api and transform it into a required format. Tests are included in `group-transactions.test`. These should all pass for the test to be deemed as complete.
 
 ## Getting started
