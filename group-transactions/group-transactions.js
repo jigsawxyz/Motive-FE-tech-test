@@ -3,10 +3,12 @@ const data = [];
 
 const groupTransactionsByMerchant = () => {
   // CODE GOES HERE
+  return {}
 };
 
 const groupTransactionsByDate = () => {
-  //
+  // CODE GOES HERE
+  return []
 };
 
 module.exports = {
