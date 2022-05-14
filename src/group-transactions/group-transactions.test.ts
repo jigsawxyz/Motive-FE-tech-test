@@ -1,12 +1,12 @@
-const {
+import {
   groupTransactionsByMerchant,
   groupTransactionsByDate,
-  data,
-} = require('./group-transactions');
+  data
+} from "./group-transactions";
 
-test('Group transactions by merchant', () => {
+test("Group transactions by merchant", () => {
   const result = groupTransactionsByMerchant();
-  const mAndSCount = result['Marks & Spencer']?.count;
+  const mAndSCount = result["Marks & Spencer"]?.count;
   const totalTransactions = Object.values(result).reduce(
     (acc, curr) => acc + curr.transactions.length,
     0
@@ -15,7 +15,7 @@ test('Group transactions by merchant', () => {
   expect(totalTransactions).toBe(data.length);
 });
 
-test('Group transactions by merchant', () => {
+test("Group transactions by merchant", () => {
   const result = groupTransactionsByDate();
 
   const totalTransactions = result?.reduce(
@@ -23,7 +23,7 @@ test('Group transactions by merchant', () => {
     0
   );
 
-  expect(result?.[0]?.date).toBe('09/10/2020');
+  expect(result?.[0]?.date).toBe("09/10/2020");
   expect(result.length).toBe(13);
   expect(totalTransactions).toBe(data.length);
 });
