@@ -1,11 +1,12 @@
+import { fetchTransactionsData } from "../api";
 import {
   groupTransactionsByMerchant,
-  groupTransactionsByDate,
-  data
+  groupTransactionsByDate
 } from "./group-transactions";
 
-test("Group transactions by merchant", () => {
-  const result = groupTransactionsByMerchant();
+test("Group transactions by merchant", async () => {
+  const data = await fetchTransactionsData();
+  const result = await groupTransactionsByMerchant();
   const mAndSCount = result["Marks & Spencer"]?.count;
   const totalTransactions = Object.values(result).reduce(
     (acc, curr) => acc + curr.transactions.length,
@@ -15,8 +16,10 @@ test("Group transactions by merchant", () => {
   expect(totalTransactions).toBe(data.length);
 });
 
-test("Group transactions by merchant", () => {
-  const result = groupTransactionsByDate();
+test("Group transactions by date", async () => {
+  const data = await fetchTransactionsData();
+
+  const result = await groupTransactionsByDate();
 
   const totalTransactions = result?.reduce(
     (acc, curr) => acc + curr?.transactions?.length || 0,
