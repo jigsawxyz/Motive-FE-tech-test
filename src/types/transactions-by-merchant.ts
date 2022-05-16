@@ -1,6 +1,8 @@
+import { RawTransaction } from "./raw-transactions";
+
 export type SingleMerchantTransaction = {
   count: number;
-  transactions: any[]; // TO-DO: Change to proper type
+  transactions: RawTransaction[];
 };
 
 export type TransactionsGroupedByMerchant = {
