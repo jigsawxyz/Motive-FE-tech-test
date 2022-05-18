@@ -2,7 +2,9 @@
 
 To start, create a fork of this repo.
 
-The aim of this test is to assess your ability to fetch data from an api and transform it into a required format. Tests are included in `group-transactions.test`. These should all pass for the test to be deemed as complete.
+The aim of this test is to assess your ability to fetch data from an api and transform it into a required format. Tests are included in `group-transactions.test`. These should all pass for the test to be deemed as complete. You are free to add/remove packages as you wish, as long as you have a good reason to do so. 
+
+Comments are appreciated and encouraged, especially the ones explaining the reasoning behind the decisions made.
 
 You can use Typescript if you prefer. If using Typescript, the expectation is that you create types for the raw data and the interface / return types of your function.
 
